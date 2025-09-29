@@ -1,6 +1,6 @@
 import { Router, Response } from 'express';
 import type { AuthenticatedRequest } from '../middleware/auth';
-import { AIOrchestrator } from '../../services/aiOrchestrator';
+import { AIOrchestrator } from '../services/aiOrchestrator';
 import { wsManager, db } from '../index';
 
 const router = Router();
