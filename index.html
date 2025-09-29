@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-," />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MominAI - AI Web App Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "jszip": "https://aistudiocdn.com/jszip@^3.10.1"
+  }
+}
+</script>
+<style>
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  @keyframes dot-pulse {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1.0);
+      opacity: 1;
+    }
+  }
+  .dot-pulse span {
+    animation: dot-pulse 1.4s infinite ease-in-out;
+    animation-fill-mode: both;
+  }
+  .dot-pulse span:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  .dot-pulse span:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+  /* New animations for "Excellence" */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 0.7s ease-out forwards;
+    opacity: 0; /* Start hidden */
+  }
+  .animate-scaleIn {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+  /* Staggered animation delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  /* Blinking cursor animation for chat */
+  .animate-blink {
+    animation: blink 1s steps(2, start) infinite;
+  }
+  @keyframes blink {
+    to { visibility: hidden; }
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-white" style="background-image: url('https://i.pinimg.com/736x/6f/9f/9e/6f9f9ee3fab274f87069fcafbf3a8af6.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

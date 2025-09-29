@@ -1,0 +1,38 @@
+{
+  "name": "mominai---ai-web-app-builder",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "cd server && npm run dev",
+    "dev:both": "concurrently \"npm run dev:server\" \"npm run dev\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react-dom": "^19.1.1",
+    "react": "^19.1.1",
+    "@google/genai": "^1.21.0",
+    "jszip": "^3.10.1",
+    "@anthropic-ai/sdk": "^0.9.1",
+    "bcrypt": "^5.1.1",
+    "cohere-ai": "^7.19.0",
+    "cors": "^2.8.5",
+    "eventemitter3": "^5.0.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.544.0",
+    "openai": "^4.104.0",
+    "playwright": "^1.55.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^8.2.2",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "MominAI - AI Web App Builder",
+  "description": "An AI-powered web application that helps users build websites by providing a prompt. It features an IDE-like interface with a chat panel, file explorer, code editor, and a live preview, leveraging AI to generate code based on predefined templates and user requests.",
+  "requestFramePermissions": []
+}
