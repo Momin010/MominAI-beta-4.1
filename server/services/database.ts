@@ -34,8 +34,17 @@ export class DatabaseManager {
   private db: Database | null = null;
 
   async initialize() {
+    const fs = require('fs');
+    const path = require('path');
+    
+    // Create data directory if it doesn't exist
+    const dataDir = path.join(__dirname, '../data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+    
     this.db = await open({
-      filename: './data/mominai.db',
+      filename: path.join(dataDir, 'mominai.db'),
       driver: sqlite3.Database
     });
 
